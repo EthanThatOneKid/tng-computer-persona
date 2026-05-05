@@ -11,6 +11,7 @@ This repository is the TNG-specific companion to the broader Star Trek computer 
 
 This is now the canonical home for the TNG Enterprise computer persona work that previously lived in `enterprise-computer` and `startrek-computer`.
 The dedicated Data persona lives in the sibling repo `tng-data-persona`.
+The dedicated Riva persona lives in the sibling repo `tng-riva-persona`.
 
 ## Source data
 
