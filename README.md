@@ -1,17 +1,18 @@
 # tng-computer-persona
 
-Deterministic preprocessing pipeline for `Star Trek: The Next Generation` dialogue and Enterprise computer interactions.
+Deterministic preprocessing pipeline for `Star Trek: The Next Generation` dialogue and TNG computer interactions.
 
 This repository is the TNG-specific companion to the broader Star Trek computer work. It turns raw episode transcripts into:
 
 - a normalized episode dialogue corpus
-- a structured Enterprise computer interaction dataset
+- a structured TNG computer interaction dataset
 - speaker profiles for major TNG voices
 - training JSONL for both general TNG persona work and computer-specific tuning
 
-This is now the canonical home for the TNG Enterprise computer persona work that previously lived in `enterprise-computer` and `startrek-computer`.
+This is now the canonical home for the TNG computer persona work that previously lived in `enterprise-computer` and `startrek-computer`.
 The dedicated Data persona lives in the sibling repo `tng-data-persona`.
 The dedicated Riva persona lives in the sibling repo `tng-riva-persona`.
+The dedicated Picard persona lives in the sibling repo `tng-picard-persona`.
 
 ## Source data
 
@@ -25,7 +26,7 @@ The pipeline reads only the `scripts/NextGen/*.txt` transcripts from that source
 
 - `data/dialogue.jsonl` — every parsed dialogue line in TNG
 - `data/episode_index.json` — per-episode dialogue counts
-- `data/computer_interactions.json` — query/reply pairs involving the Enterprise computer
+- `data/computer_interactions.json` — query/reply pairs involving the TNG computer
 - `data/speaker_profiles.json` — aggregate voice stats by speaker
 - `data/enterprise_computer_train.jsonl` — user/computer training pairs
 - `data/tng_character_train.jsonl` — character-conditioned training records
@@ -62,7 +63,7 @@ raw TNG transcripts
 
 The earlier `enterprise-computer` repo focused on extracting computer exchanges from TNG. This repo keeps that use case, but expands it into a reusable TNG persona corpus so you can model:
 
-- the Enterprise computer
+- the TNG computer
 - Jean-Luc Picard's command voice
 - Data's literal precision
 - other TNG speaking styles through aggregated speaker profiles
