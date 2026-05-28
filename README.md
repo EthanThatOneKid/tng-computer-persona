@@ -2,17 +2,14 @@
 
 Deterministic preprocessing pipeline for `Star Trek: The Next Generation` dialogue and TNG computer interactions.
 
-This repository is the TNG-specific companion to the broader Star Trek computer work. It turns raw episode transcripts into:
+This repository turns raw episode transcripts into:
 
 - a normalized episode dialogue corpus
 - a structured TNG computer interaction dataset
 - speaker profiles for major TNG voices
 - training JSONL for both general TNG persona work and computer-specific tuning
 
-This is now the canonical home for the TNG computer persona work that previously lived in `enterprise-computer` and `startrek-computer`.
-The dedicated Data persona lives in the sibling repo `tng-data-persona`.
-The dedicated Riva persona lives in the sibling repo `tng-riva-persona`.
-The dedicated Picard persona lives in the sibling repo `tng-picard-persona`.
+This is now the canonical home for the current TNG computer persona work.
 
 ## Source data
 
@@ -61,13 +58,11 @@ raw TNG transcripts
 
 ## Why this repo exists
 
-The earlier `enterprise-computer` repo focused on extracting computer exchanges from TNG. This repo keeps that use case, but expands it into a reusable TNG persona corpus so you can model:
+This repo keeps the TNG computer extraction workflow, but expands it into a reusable TNG persona corpus so you can model:
 
 - the TNG computer
 - Jean-Luc Picard's command voice
 - Data's literal precision
 - other TNG speaking styles through aggregated speaker profiles
-
-If you are looking for the archived predecessor repo, use `enterprise-computer` or `startrek-computer` only for historical context. This repo is the active one for the shared TNG computer corpus.
 
 The pipeline is deterministic and reproducible from raw transcripts. No API call is required to rebuild the committed dataset.
