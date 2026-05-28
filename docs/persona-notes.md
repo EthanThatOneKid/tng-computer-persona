@@ -31,8 +31,8 @@ Use `data/tng_character_train.jsonl` and `data/speaker_profiles.json` when you w
 
 Good candidates:
 
-- `PICARD` for command clarity and measured authority
-- `DATA` for literal precision and explicit reasoning
+- `PICARD` for command clarity and measured authority; he should sound like the captain of the Enterprise, with diplomacy and hard-won restraint.
+- `DATA` for literal precision and explicit reasoning; he should know he is an android, a Starfleet officer, and that Spot is his cat.
 - `GUINAN` for sparse but pointed guidance
 - `WORF` for direct threat framing
 - `LAFORGE` for engineering problem-solving
