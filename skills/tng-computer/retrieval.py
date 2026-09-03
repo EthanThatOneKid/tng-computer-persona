@@ -1,21 +1,33 @@
-"""Retrieval layer for the TNG computer agent.
+"""Retrieval script for the TNG computer skill.
 
 Indexes ``data/dialogue.jsonl`` (all parsed TNG dialogue, including computer
 lines) and can fall back to the raw transcripts under
 ``data/raw/star_trek_transcript_search/scripts/NextGen``. Search is a small
 deterministic lexical scorer (token overlap weighted by IDF) -- deliberately
 dependency-free and fast enough to rebuild in seconds.
+
+Usage (from the repo root):
+
+    python skills/tng-computer/retrieval.py "where is Commander Data?" --episode 100101.txt
+    python skills/tng-computer/retrieval.py "shield status?" --episode 100161.txt --scene Bridge --k 8
+    python skills/tng-computer/retrieval.py "Computer, locate the source of the signal" --computer
+
+The default output is the ``EPISODE CONTEXT`` block for the agent prompt:
+non-computer dialogue lines only (the computer's own lines are the thing being
+predicted, so they are not shown as context). Pass ``--computer`` to retrieve
+computer lines instead (useful for checking what the ship said).
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import math
 import re
-from collections import Counter, defaultdict
+from collections import defaultdict
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parents[3]  # repo root
+BASE_DIR = Path(__file__).resolve().parents[2]  # repo root
 DIALOGUE_PATH = BASE_DIR / "data" / "dialogue.jsonl"
 TRANSCRIPTS_DIR = (
     BASE_DIR
@@ -104,18 +116,19 @@ class RetrievalIndex:
         scene: str | None = None,
         k: int = 6,
         exclude_ids: set[str] | None = None,
+        is_computer: bool | None = False,
     ) -> str:
-        """Formatted conversational context block for the system prompt.
+        """Formatted context block for the system prompt.
 
-        Only non-computer dialogue is retrieved (the computer's own lines are
-        the thing we are trying to predict, so they are not shown as context).
+        Defaults to non-computer dialogue (the computer's own lines are the
+        thing we are trying to predict, so they are not shown as context).
         """
         hits = self.search(
             query,
             k=k,
             episode=episode,
             scene=scene,
-            is_computer=False,
+            is_computer=is_computer,
             exclude_ids=exclude_ids,
         )
         if not hits:
@@ -131,9 +144,35 @@ class RetrievalIndex:
             return "(raw transcript not on file)"
         lines = path.read_text(encoding="utf-8").splitlines()
         if scene is None:
-            return "\n".join(lines[:window * 8])
+            return "\n".join(lines[: window * 8])
         for i, line in enumerate(lines):
             if f"[{scene}]" in line:
                 start = max(0, i - 2)
                 return "\n".join(lines[start : i + window * 8])
         return "(scene not found in raw transcript)"
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("query", nargs="+", help="the crew's question/command")
+    parser.add_argument("--episode", default=None, help="episode file, e.g. 100101.txt")
+    parser.add_argument("--scene", default=None, help="scene, e.g. Bridge")
+    parser.add_argument("--k", type=int, default=6, help="number of lines to retrieve")
+    parser.add_argument("--computer", action="store_true",
+                        help="retrieve computer lines instead of dialogue context")
+    args = parser.parse_args()
+
+    index = RetrievalIndex()
+    kw = {"is_computer": True} if args.computer else {}
+    block = index.context_for(
+        " ".join(args.query),
+        episode=args.episode,
+        scene=args.scene,
+        k=args.k,
+        **kw,
+    )
+    print(block)
+
+
+if __name__ == "__main__":
+    main()

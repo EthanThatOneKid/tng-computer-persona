@@ -1,4 +1,4 @@
-"""Ship-state tracker for the TNG computer agent.
+"""Ship-state script for the TNG computer skill.
 
 Builds verified crew-location facts from the ship's own computer responses in
 ``data/enterprise_computer_train.jsonl``. Only the computer's *verified*
@@ -11,22 +11,28 @@ Facts are keyed by *episode*: locations in the show are episode-relative
 so an episode-scoped SHIP STATE block is required to avoid answering with the
 wrong episode's facts. ``load(..., exclude_ids=...)`` supports hold-out
 exclusion for evaluation so the tracker never learns from rows being scored.
+
+Usage (from the repo root):
+
+    python skills/tng-computer/state.py --episode 100110.txt
+    python skills/tng-computer/state.py --query "where is Commander Data?" --episode 100101.txt
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parents[3]  # repo root
+BASE_DIR = Path(__file__).resolve().parents[2]  # repo root
 TRAIN_PATH = BASE_DIR / "data" / "enterprise_computer_train.jsonl"
 
 # "Captain Picard is in Transporter room three." /
 # "Lieutenant Commander Data now located in Holodeck area 4J."
 # Responses are title-cased in the corpus, so the whole pattern is
-# case-insensitive; the matched rank/verb are kept so offline answers can
-# reproduce the gold style exactly.
+# case-insensitive; the matched rank/verb are kept so answers can reproduce
+# the gold style exactly.
 _RANK = r"Lieutenant Commander|Commander|Captain|Counselor|Doctor|Ensign|Ambassador|Mr\.|Ms\.|Mrs\.|Lieutenant"
 _LOC_RE = re.compile(
     rf"^(?:(?P<rank>{_RANK})\s+)?"
@@ -128,3 +134,26 @@ class StateTracker:
         for name, (display, verb, place) in sorted(facts):
             lines.append(f"  {name}: {place}")
         return "\n".join(lines)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--episode", default=None, help="episode file, e.g. 100101.txt")
+    parser.add_argument("--query", default=None,
+                        help="answer a crew-location query from verified state")
+    args = parser.parse_args()
+
+    tracker = StateTracker().load()
+    if args.query:
+        person = tracker.extract_person(args.query)
+        if person is None:
+            print("(no person identified in query)")
+            return
+        answer = tracker.answer_for(person, args.episode)
+        print(answer if answer is not None else "That information is not available.")
+    else:
+        print(tracker.snapshot(episode=args.episode))
+
+
+if __name__ == "__main__":
+    main()

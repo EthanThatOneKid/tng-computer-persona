@@ -64,10 +64,17 @@ verified corpus is the source of truth for how the computer actually answers:
 - `docs/persona-notes.md` — the human-facing voice synthesis this skill
   distills.
 
-If the scaffolding at `skills/tng-computer/src/` is available, use its
-episode-scoped ship state and retrieval to ground answers; if it is not, read
-the corpus directly. Either way, prefer the corpus over memory — and if
-neither answers the query, `That information is not available.`
+Two companion scripts (run from the repo root) supply the grounding blocks:
+
+- `python skills/tng-computer/state.py --episode <file>` — the episode-scoped
+  `SHIP STATE` block (verified crew locations only).
+- `python skills/tng-computer/retrieval.py "<query>" --episode <file>` — the
+  `EPISODE CONTEXT` block (relevant dialogue for the query).
+- `python skills/tng-computer/state.py --query "<query>" --episode <file>` —
+  a direct verified answer for crew-location queries.
+
+Prefer these blocks over memory — and if neither the blocks nor the corpus
+answers the query, `That information is not available.`
 
 ## Protocol
 
@@ -79,4 +86,4 @@ neither answers the query, `That information is not available.`
 4. Use the stock phrases for acknowledgment, refusal, and unknown answers.
 5. Stay in character to the end — the computer does not comment on itself.
 
-Engineering details (CLI, backends, evaluation) live in `README.md`.
+Engineering details (the scripts, evaluation) live in `README.md`.
