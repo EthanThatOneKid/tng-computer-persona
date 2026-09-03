@@ -50,6 +50,9 @@ NARRATIVE_DEGRADED: dict[str, str] = {
     "35337ff6e620": "Rascals: classroom-7 child's computer refuses the command and offers a game",
     "dd0c268d4f90": "Rascals: classroom-7 child's computer refuses the command and offers plants/animals",
     "3eae989d57f3": "Rascals: classroom-7 child's computer gives a canned spelling lesson ('E N T E R P R I S E')",
+    # "Shades of Gray" -- Riker's coma-dream clip show replays the Bynar-modified
+    # auto-destruct from "11001001", including the computer's altered male voice.
+    "68a34e760985": "Shades of Gray: clip replay of the Bynar-modified auto-destruct ('Recognise Picard...' male voice), auto-paired with Troi's Sickbay line across the scene cut",
     # "Ship in a Bottle" -- Moriarty seizes the Enterprise computer.
     "1830fe54bdd3": "Ship in a Bottle: Moriarty takeover -- 'Command functions are offline.'",
     "c07bc06589b8": "Ship in a Bottle: Moriarty takeover -- 'Authorisation denied.'",
@@ -70,6 +73,10 @@ QUERY_REPAIRS: dict[str, tuple[str, str]] = {
     # ('Very hazardous, Commander.'). The real command is the one Picard Jr. gives the
     # classroom computer right after the greeting.
     "39990ff06682": ("PICARD JR", "Computer, display interior security grid."),
+    # "Suspicions" -- Crusher, inside the shuttle testing the metaphasic shield, asks the
+    # computer for shield status; the extractor paired the report with Picard's question
+    # to Crusher on the viewscreen (a line to a person, one row above the real query).
+    "f2d2b4a0e8c4": ("CRUSHER", "I'm all right. Computer, shield status?"),
 }
 
 # Curated query-blank overrides: interaction IDs whose auto-paired query must be
@@ -117,6 +124,27 @@ QUERY_BLANKS: dict[str, str] = {
     # "In Theory" -- decompression warning when the false planet appears; auto-paired
     # with Picard's order to Data (a person, not the computer).
     "f688b1caf691": "In Theory: unsolicited decompression warning auto-paired with Picard's order to Data",
+    # "Elementary, Dear Data" -- program-completion announcement while Data, La Forge and
+    # Pulaski converse outside the holodeck (no computer address in the window).
+    "a9ceb20f0306": "Elementary, Dear Data: unsolicited 'Programme complete. You may enter.' announcement auto-paired with La Forge's question to Data",
+    # "Booby Trap" -- real-ship warnings during the trap crisis, interleaved with the
+    # crew's planning dialogue (Geordi's holodeck sims with Brahms and the bridge debate).
+    "6d437d3d7946": "Booby Trap: unsolicited energy-critical/terminate-simulations announcement auto-paired with La Forge's line to the Brahms simulation",
+    "3fad3c2090db": "Booby Trap: unsolicited shield/radiation warning auto-paired with La Forge's remark to the Brahms simulation",
+    "6d715e358f88": "Booby Trap: unsolicited shield/radiation warning auto-paired with La Forge's escape plan to Picard",
+    "ebe7f1ec4b6b": "Booby Trap: unsolicited shield/radiation warning auto-paired with Riker's all-hands announcement",
+    # "The Defector" -- incoming-priority-message alert interrupting the Bridge debate.
+    "b4d48b06cd93": "The Defector: unsolicited priority-one Starfleet message alert auto-paired with Picard's musing on Romulan cloaking",
+    # "Hollow Pursuits" -- structural-failure warning while the runaway-acceleration crisis
+    # unfolds; Riker's 'Injector status?' was a question to Data, who answered it first.
+    "a3bab9683340": "Hollow Pursuits: unsolicited structural-failure warning auto-paired with Riker's question to Data",
+    # "Brothers" -- deck-one life-support evacuation broadcast while the crew clears the
+    # Bridge; auto-paired with Riker's order to La Forge.
+    "3ee3aa802f29": "Brothers: unsolicited life-support evacuation broadcast auto-paired with Riker's order to La Forge",
+    # "Remember Me" -- the second life-support countdown, right after Crusher tells the
+    # computer she is not talking to it (the first countdown of the same sequence at
+    # line 410 is blanked above).
+    "931b5b59bde5": "Remember Me: unsolicited life-support countdown auto-paired with Crusher's aside ('I'm not talking to you.')",
 }
 
 

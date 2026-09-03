@@ -4628,8 +4628,8 @@
     "season": 2,
     "stardate": "42286.3",
     "scene": "Outside Holodeck",
-    "query_speaker": "LAFORGE",
-    "query_text": "So this will be something new, something created by the computer?",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "Programme complete. You may enter.",
     "response_lines": [
       105
@@ -8015,7 +8015,9 @@
       "jean",
       "luc",
       "captain"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Shades of Gray: clip replay of the Bynar-modified auto-destruct ('Recognise Picard...' male voice), auto-paired with Troi's Sickbay line across the scene cut"
   },
   {
     "id": "c7f7c7fd9b74",
@@ -9041,8 +9043,8 @@
     "season": 3,
     "stardate": "",
     "scene": "Utopia Planitia Drafting room",
-    "query_speaker": "LAFORGE",
-    "query_text": "Yeah, but how do we reconfigure?",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "Energy reserves reaching critical stage. Standard procedure requires termination of all simulations.",
     "response_lines": [
       328
@@ -9323,8 +9325,8 @@
     "season": 3,
     "stardate": "",
     "scene": "Utopia Planitia Drafting room",
-    "query_speaker": "LAFORGE",
-    "query_text": "You see? Same variables, only this time the computer didn't quite make it.",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "Deflector shield failure. Lethal radiation levels. Fatal exposure in twenty six minutes.",
     "response_lines": [
       400
@@ -9372,8 +9374,8 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "LAFORGE",
-    "query_text": "Not if we shut everything off. One blast of everything we've got left for a microsecond to beat the inertia and then we shut it all down, except minimal life support and two thrusters. No impulse engines. No computer.",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "Deflector shield failure. Lethal radiation levels. Fatal exposure in twelve minutes.",
     "response_lines": [
       420
@@ -9421,8 +9423,8 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "RIKER",
-    "query_text": "All hands, this is Commander Riker. We are about to engage impulse engines for a short burst. Inertial dampers are on manual. They may not fully compensate for acceleration. So brace yourselves.",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "Deflector shield failure. Lethal radiation levels.",
     "response_lines": [
       428
@@ -9847,8 +9849,8 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "PICARD",
-    "query_text": "It is hard to believe in what one cannot see. And yet conceivably, with their cloaking technology, a fleet of Romulan warships could be passing before our eyes. There must be some way to neutralise this advantage.",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "Captain Picard, priority one message from Starfleet coming in on secured channel.",
     "response_lines": [
       166
@@ -10993,8 +10995,8 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "RIKER",
-    "query_text": "Injector status?",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "At current acceleration, structural failure will occur in thirty seconds.",
     "response_lines": [
       465
@@ -11770,8 +11772,8 @@
     "season": 4,
     "stardate": "44085.7",
     "scene": "Bridge",
-    "query_speaker": "RIKER",
-    "query_text": "La Forge, let's get a diagnostic sweep underway.",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "Evacuate Bridge. Deck one life support failure in twenty seconds.",
     "response_lines": [
       67
@@ -14046,8 +14048,8 @@
     "season": 4,
     "stardate": "44161.2",
     "scene": "Bridge",
-    "query_speaker": "CRUSHER",
-    "query_text": "I'm not talking to you. Click my heels together three times and I'm back in Kansas. Can it be that simple?",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "Two minutes, thirty seconds to life support failure.",
     "response_lines": [
       401
@@ -23209,8 +23211,8 @@
     "season": 6,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "PICARD",
-    "query_text": "Beverly, what's happening?",
+    "query_speaker": "CRUSHER",
+    "query_text": "I'm all right. Computer, shield status?",
     "response_text": "Metaphasic shield holding. All systems within normal operating parameters.",
     "response_lines": [
       379
