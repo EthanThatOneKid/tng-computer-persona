@@ -16,11 +16,15 @@ def main() -> None:
     top_speakers = sorted(profiles, key=lambda row: row["line_count"], reverse=True)[:12]
     query_speakers = Counter(row["query_speaker"] for row in interactions if row["query_speaker"])
 
+    narrative_degraded = [row for row in interactions if row.get("narrative_degraded")]
+    degraded_by_episode = Counter(row["episode"] for row in narrative_degraded)
+
     report_lines = [
         "# TNG Persona Dataset Report",
         "",
         f"- Dialogue rows: {len(dialogue)}",
         f"- Computer interactions: {len(interactions)}",
+        f"- Narrative-degraded interactions (flagged): {len(narrative_degraded)}",
         f"- Speaker profiles: {len(profiles)}",
         f"- Enterprise computer training rows: {len(enterprise_rows)}",
         f"- Character-conditioned training rows: {len(character_rows)}",
@@ -61,6 +65,30 @@ def main() -> None:
 
     for speaker, count in query_speakers.most_common(12):
         report_lines.append(f"| {speaker} | {count} |")
+
+    report_lines.extend(
+        [
+            "",
+            "## Narrative-degraded interactions",
+            "",
+            "Interactions where the plot intentionally degrades the computer's capability",
+            "(hijack, virus, alien interference, possession, simulated failure). They are",
+            "flagged in `computer_interactions.json` and excluded from the golden enterprise",
+            "computer training set.",
+            "",
+            "| Episode | Flagged |",
+            "|---|---:|",
+        ]
+    )
+
+    episode_order = {
+        row["episode"]: (row["season"], row["episode_number"]) for row in interactions
+    }
+    for episode, count in sorted(
+        degraded_by_episode.items(),
+        key=lambda item: episode_order.get(item[0], (99, 99)),
+    ):
+        report_lines.append(f"| {episode} | {count} |")
 
     report_lines.extend(
         [

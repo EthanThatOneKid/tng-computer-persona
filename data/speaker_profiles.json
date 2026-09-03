@@ -312,6 +312,45 @@
     ]
   },
   {
+    "speaker": "Q",
+    "is_computer": false,
+    "line_count": 540,
+    "episode_count": 8,
+    "question_rate": 0.293,
+    "avg_word_count": 17.42,
+    "top_tokens": [
+      "not",
+      "but",
+      "well",
+      "you're",
+      "will",
+      "all",
+      "now",
+      "i'm",
+      "can",
+      "one",
+      "would",
+      "about"
+    ],
+    "common_openers": [
+      "Really?",
+      "I suggest you",
+      "This is a",
+      "Temper, temper, mon",
+      "It was a",
+      "I'm in a",
+      "This is not",
+      "I was just"
+    ],
+    "sample_lines": [
+      "Thou are notified that thy kind hath infiltrated the galaxy too far already. Thou art directed to return to thine own solar system immediately.",
+      "We call ourselves the Q. Or thou mayst call me that. It's all much the same thing.",
+      "I present myself to thee as a fellow ship captain, that thou mayst better understand me. Go back whence thou camest. (to Helmsman) Stay where thou art!",
+      "Knowing humans as thou dost, Captain, wouldst thou be captured helpless by them? Now, go back or thou shalt most certainly die.",
+      "Captain, thy little centuries go by so rapidly. Perhaps thou will better understand this."
+    ]
+  },
+  {
     "speaker": "COMPUTER",
     "is_computer": true,
     "line_count": 527,

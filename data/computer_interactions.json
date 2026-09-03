@@ -101,8 +101,9 @@
     "season": 1,
     "stardate": "41153.7",
     "scene": "Corridor",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "no qualifying non-computer utterance within the pairing window",
     "response_text": "You're welcome, Commander Riker. And if you care to enter, Commander?",
     "response_lines": [
       455
@@ -256,9 +257,9 @@
     "response_count": 1,
     "context": [
       {
-        "speaker": "LAFORGE",
-        "text": "And where does she go?",
-        "line_num": 99,
+        "speaker": "Q",
+        "text": "Into nothingness. I entreat you to carefully obey the rules of the game. The only one who can destroy your Tasha now is you.",
+        "line_num": 100,
         "is_computer": false
       },
       {
@@ -292,8 +293,9 @@
     "season": 1,
     "stardate": "41997.7",
     "scene": "Outside Holodeck",
-    "query_speaker": "TROI",
-    "query_text": "The program's installed and waiting.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "The Big Goodbye: unsolicited holodeck prompt ('Programme desired location.') auto-paired with Troi's Ready-room line",
     "response_text": "Programme desired location.",
     "response_lines": [
       25
@@ -933,7 +935,9 @@
       "estimate",
       "release",
       "antimatter"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "11001001: computer hijacked by Bynars (altered male voice during containment crisis)"
   },
   {
     "id": "244f5e2ccd03",
@@ -942,8 +946,9 @@
     "season": 1,
     "stardate": "41365.9",
     "scene": "Corridor",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "no qualifying non-computer utterance within the pairing window",
     "response_text": "Decks two through four to cargo transporters. Decks five through ten, proceed to transporters one, two, three and four. Decks six through sixteen, proceed to transporters five, six, seven, eight, nine and ten.",
     "response_lines": [
       274
@@ -982,7 +987,9 @@
       "two",
       "four",
       "five"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "11001001: Bynar-coded fake evacuation announcement"
   },
   {
     "id": "55d2532195ec",
@@ -1038,7 +1045,9 @@
       "through",
       "proceed",
       "transporters"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "11001001: Bynar-coded fake evacuation announcement"
   },
   {
     "id": "0b04a6aeba2a",
@@ -1085,7 +1094,9 @@
       "all",
       "decks",
       "empty"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "11001001: false report under Bynar control ('All decks empty.')"
   },
   {
     "id": "fc5eeb8b2910",
@@ -1134,7 +1145,9 @@
       "magnetic",
       "field",
       "containing"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "11001001: explains the Bynar-programmed red alert"
   },
   {
     "id": "4f7effc89e2e",
@@ -1322,7 +1335,9 @@
       "except",
       "captain",
       "first"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "11001001: false evacuation claim under Bynar control"
   },
   {
     "id": "61d2ec954ca9",
@@ -1551,7 +1566,9 @@
       "information",
       "not",
       "available"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "11001001: withholds the Bynar theft ('That information is not available.')"
   },
   {
     "id": "7b04f1a397df",
@@ -1600,7 +1617,9 @@
       "jean",
       "luc",
       "captain"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "11001001: altered male voice during Bynar-modified auto-destruct"
   },
   {
     "id": "e025702ba007",
@@ -1705,8 +1724,9 @@
     "season": 1,
     "stardate": "41365.9",
     "scene": "Outside Turbolift",
-    "query_speaker": "PICARD",
-    "query_text": "An enormous amount of data is being received and stored in the main computer.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "11001001: 'Bridge access denied' warning auto-paired with Picard's observation in Engineering",
     "response_text": "Bridge access denied.",
     "response_lines": [
       415
@@ -1790,7 +1810,9 @@
       "first",
       "officer",
       "agree"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "11001001: altered male voice during Bynar-modified auto-destruct"
   },
   {
     "id": "e45f582c9f75",
@@ -1845,8 +1867,9 @@
     "season": 1,
     "stardate": "41365.9",
     "scene": "Starbase Command Centre",
-    "query_speaker": "ONE ZERO",
-    "query_text": "to restore our computer.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "11001001: 'cleared the starbase perimeter' announcement auto-paired with Bynar dialogue",
     "response_text": "USS Enterprise has cleared the starbase perimeter.",
     "response_lines": [
       526
@@ -2261,7 +2284,9 @@
       "warning",
       "input",
       "overload"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Home Soil: sensors overloaded by alien energy field"
   },
   {
     "id": "7c71bb2e38d7",
@@ -2306,7 +2331,9 @@
     "response_keywords": [
       "magnification",
       "deactivated"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Home Soil: instruments deactivated by alien energy field"
   },
   {
     "id": "a3eff6e23613",
@@ -2353,7 +2380,9 @@
       "request",
       "being",
       "patched"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Home Soil: translator failing under alien interference"
   },
   {
     "id": "c2a4621d822f",
@@ -2397,7 +2426,9 @@
     ],
     "response_keywords": [
       "gibberish"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Home Soil: translator fried by alien interference ('(gibberish)')"
   },
   {
     "id": "309fe67aec6a",
@@ -2634,8 +2665,9 @@
     "season": 1,
     "stardate": "41416.2",
     "scene": "Classroom",
-    "query_speaker": "RIKER",
-    "query_text": "Not now. (enters turbolift) When it doesn't interfere with my duties, Remmick.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Coming Of Age: unsolicited classroom test announcement auto-paired with Riker's corridor line",
     "response_text": "Last question on the hyperspace physics test. If the matter and antimatter tanks on a Galaxy class starship are nine tenths depleted, calculate the intermix ratio necessary to reach a starbase a hundred light years away at warp factor eight. Begin. Time elapsed. You now have one hour free before the next test.",
     "response_lines": [
       105,
@@ -3858,8 +3890,9 @@
     "season": 1,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "no qualifying non-computer utterance within the pairing window",
     "response_text": "Repulse shuttle has cleared docking bay three.",
     "response_lines": [
       7
@@ -3895,8 +3928,9 @@
     "season": 1,
     "stardate": "",
     "scene": "Transporter room",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "no qualifying non-computer utterance within the pairing window",
     "response_text": "Bio-transfer authorisation complete.",
     "response_lines": [
       280
@@ -3980,7 +4014,9 @@
       "all",
       "circuits",
       "functional"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "The Child: alien entity speaks through the computer (male voice during module diagnostic)"
   },
   {
     "id": "45caaf322da6",
@@ -4024,7 +4060,9 @@
     ],
     "response_keywords": [
       "confirmed"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "The Child: alien entity confirms its own growth through the computer (same possession exchange)"
   },
   {
     "id": "6098b0d8fc42",
@@ -4033,8 +4071,9 @@
     "season": 2,
     "stardate": "42193.6",
     "scene": "Bridge",
-    "query_speaker": "PICARD",
-    "query_text": "Transporter room, have you been able to establish a lock?",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Where Silence Has Lease: unsolicited 'Emergency power engaged' alert auto-paired with Picard hailing the transporter room",
     "response_text": "Emergency power engaged.",
     "response_lines": [
       233
@@ -4079,8 +4118,9 @@
     "season": 2,
     "stardate": "42193.6",
     "scene": "Engineering",
-    "query_speaker": "PULASKI",
-    "query_text": "Why do get the feeling this was not the time to join this ship?",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Where Silence Has Lease: destruct voice-print recognition auto-paired with Pulaski's lounge line",
     "response_text": "Recognise, Picard Jean-Luc. Recognise Riker, William T.",
     "response_lines": [
       389
@@ -4221,8 +4261,9 @@
     "season": 2,
     "stardate": "42193.6",
     "scene": "Engineering",
-    "query_speaker": "RIKER",
-    "query_text": "What would be the least painful to our crew? Move to it quickly, or allow them time to prepare for it thoroughly? Well, twenty minutes? Nice round figure.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Where Silence Has Lease: destruct countdown broadcast auto-paired with Riker's crew debate",
     "response_text": "Twenty minutes to auto-destruct. Nineteen minutes, fifty seconds",
     "response_lines": [
       397
@@ -4411,8 +4452,9 @@
     "season": 2,
     "stardate": "42193.6",
     "scene": "Bridge",
-    "query_speaker": "PICARD",
-    "query_text": "Counsellor Troi?",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Where Silence Has Lease: destruct countdown broadcast auto-paired with Picard's question to Troi",
     "response_text": "Twenty seconds to auto-destruct. Ten seconds to auto-destruct.",
     "response_lines": [
       438
@@ -4598,8 +4640,9 @@
     "season": 2,
     "stardate": "42286.3",
     "scene": "Outside Holodeck",
-    "query_speaker": "LAFORGE",
-    "query_text": "So this will be something new, something created by the computer?",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Elementary, Dear Data: unsolicited 'Programme complete. You may enter.' announcement auto-paired with La Forge's question to Data",
     "response_text": "Programme complete. You may enter.",
     "response_lines": [
       105
@@ -6194,7 +6237,9 @@
       "kija",
       "sis",
       "exen"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Contagion: Iconian virus corrupts computer (unintelligible 'Kandar' speech)"
   },
   {
     "id": "14254e08f69c",
@@ -6248,7 +6293,9 @@
       "nien",
       "cobar",
       "konyen"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Contagion: Iconian virus corrupts computer (unintelligible 'Kandar' speech)"
   },
   {
     "id": "4f35f947137e",
@@ -6295,7 +6342,9 @@
       "jet",
       "tor",
       "eir"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Contagion: Iconian virus corrupts computer (unintelligible 'Kandar' speech)"
   },
   {
     "id": "bddf23652a6d",
@@ -7979,7 +8028,9 @@
       "jean",
       "luc",
       "captain"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Shades of Gray: clip replay of the Bynar-modified auto-destruct ('Recognise Picard...' male voice), auto-paired with Troi's Sickbay line across the scene cut"
   },
   {
     "id": "c7f7c7fd9b74",
@@ -8123,7 +8174,9 @@
       "has",
       "been",
       "recorded"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Evolution: denies real control malfunction while nanites interfere"
   },
   {
     "id": "907b89557ec7",
@@ -8266,7 +8319,9 @@
       "queen's",
       "pawn",
       "king's"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Evolution: nanite takeover -- computer stuck replying with chess moves"
   },
   {
     "id": "ec4133040f4f",
@@ -8313,7 +8368,9 @@
       "queen",
       "three",
       "two"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Evolution: nanite takeover -- computer stuck replying with chess moves"
   },
   {
     "id": "33ae94eb6466",
@@ -8999,8 +9056,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Utopia Planitia Drafting room",
-    "query_speaker": "LAFORGE",
-    "query_text": "Yeah, but how do we reconfigure?",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Booby Trap: unsolicited energy-critical/terminate-simulations announcement auto-paired with La Forge's line to the Brahms simulation",
     "response_text": "Energy reserves reaching critical stage. Standard procedure requires termination of all simulations.",
     "response_lines": [
       328
@@ -9281,8 +9339,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Utopia Planitia Drafting room",
-    "query_speaker": "LAFORGE",
-    "query_text": "You see? Same variables, only this time the computer didn't quite make it.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Booby Trap: unsolicited shield/radiation warning auto-paired with La Forge's remark to the Brahms simulation",
     "response_text": "Deflector shield failure. Lethal radiation levels. Fatal exposure in twenty six minutes.",
     "response_lines": [
       400
@@ -9330,8 +9389,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "LAFORGE",
-    "query_text": "Not if we shut everything off. One blast of everything we've got left for a microsecond to beat the inertia and then we shut it all down, except minimal life support and two thrusters. No impulse engines. No computer.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Booby Trap: unsolicited shield/radiation warning auto-paired with La Forge's escape plan to Picard",
     "response_text": "Deflector shield failure. Lethal radiation levels. Fatal exposure in twelve minutes.",
     "response_lines": [
       420
@@ -9379,8 +9439,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "RIKER",
-    "query_text": "All hands, this is Commander Riker. We are about to engage impulse engines for a short burst. Inertial dampers are on manual. They may not fully compensate for acceleration. So brace yourselves.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Booby Trap: unsolicited shield/radiation warning auto-paired with Riker's all-hands announcement",
     "response_text": "Deflector shield failure. Lethal radiation levels.",
     "response_lines": [
       428
@@ -9805,8 +9866,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "PICARD",
-    "query_text": "It is hard to believe in what one cannot see. And yet conceivably, with their cloaking technology, a fleet of Romulan warships could be passing before our eyes. There must be some way to neutralise this advantage.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "The Defector: unsolicited priority-one Starfleet message alert auto-paired with Picard's musing on Romulan cloaking",
     "response_text": "Captain Picard, priority one message from Starfleet coming in on secured channel.",
     "response_lines": [
       166
@@ -9910,8 +9972,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "SETAL",
-    "query_text": "What a fool I've been. To come looking for courage in a lair of cowards.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "The Defector: incoming-message alert auto-paired with Setal's line in the debriefing room",
     "response_text": "Captain Picard, priority message from security officer, Klingon vessel Bortas.",
     "response_lines": [
       226
@@ -10100,8 +10163,8 @@
     "season": 3,
     "stardate": "43539.1",
     "scene": "Turbolift",
-    "query_speaker": "LAFORGE",
-    "query_text": "We're recalibrating his language circuits, so he can't talk yet.",
+    "query_speaker": "Q",
+    "query_text": "Where's the main shuttlebay?",
     "response_text": "Main shuttlebay is located on deck four.",
     "response_lines": [
       432
@@ -10109,15 +10172,15 @@
     "response_count": 1,
     "context": [
       {
-        "speaker": "CRUSHER",
-        "text": "He's going to be all right.",
-        "line_num": 427,
+        "speaker": "Q",
+        "text": "There are creatures in the universe who would consider you the ultimate achievement, android. No feelings, no emotions, no pain. And yet you covet those qualities of humanity. Believe me, you're missing nothing. But if it means anything to you, you're a better human than I.",
+        "line_num": 429,
         "is_computer": false
       },
       {
-        "speaker": "LAFORGE",
-        "text": "We're recalibrating his language circuits, so he can't talk yet.",
-        "line_num": 428,
+        "speaker": "Q",
+        "text": "Where's the main shuttlebay?",
+        "line_num": 431,
         "is_computer": false
       },
       {
@@ -10127,9 +10190,9 @@
         "is_computer": true
       },
       {
-        "speaker": "WORF",
-        "text": "Captain, an unscheduled shuttle has just been launched.",
-        "line_num": 435,
+        "speaker": "Q",
+        "text": "Take me there.",
+        "line_num": 433,
         "is_computer": false
       }
     ],
@@ -10289,8 +10352,9 @@
     "season": 3,
     "stardate": "43745.2",
     "scene": "Resort Lobby",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "no qualifying non-computer utterance within the pairing window",
     "response_text": "Welcome to Risa. All that is ours is yours.",
     "response_lines": [
       8
@@ -10951,8 +11015,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "RIKER",
-    "query_text": "Injector status?",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Hollow Pursuits: unsolicited structural-failure warning auto-paired with Riker's question to Data",
     "response_text": "At current acceleration, structural failure will occur in thirty seconds.",
     "response_lines": [
       465
@@ -11728,8 +11793,9 @@
     "season": 4,
     "stardate": "44085.7",
     "scene": "Bridge",
-    "query_speaker": "RIKER",
-    "query_text": "La Forge, let's get a diagnostic sweep underway.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Brothers: unsolicited life-support evacuation broadcast auto-paired with Riker's order to La Forge",
     "response_text": "Evacuate Bridge. Deck one life support failure in twenty seconds.",
     "response_lines": [
       67
@@ -14004,8 +14070,9 @@
     "season": 4,
     "stardate": "44161.2",
     "scene": "Bridge",
-    "query_speaker": "CRUSHER",
-    "query_text": "I'm not talking to you. Click my heels together three times and I'm back in Kansas. Can it be that simple?",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Remember Me: unsolicited life-support countdown auto-paired with Crusher's aside ('I'm not talking to you.')",
     "response_text": "Two minutes, thirty seconds to life support failure.",
     "response_lines": [
       401
@@ -14198,8 +14265,9 @@
     "season": 4,
     "stardate": "44161.2",
     "scene": "Bridge",
-    "query_speaker": "CRUSHER",
-    "query_text": "Stable threshold. They've been trying to create a stable threshold. Where are they trying to do it? Where did they do it the first time? Engineering!",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Remember Me: unsolicited life-support countdown auto-paired with Crusher's self-talk",
     "response_text": "One minute, thirty seconds to life support failure.",
     "response_lines": [
       410
@@ -14954,8 +15022,9 @@
     "season": 4,
     "stardate": "44307.3",
     "scene": "Bridge",
-    "query_speaker": "DIRGO",
-    "query_text": "While we are doing that, your Captain is dying. With those wounds, most men would already be dead. If he doesn't get water. When I start firing, you better do your part.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Final Mission: unsolicited radiation warning auto-paired with Dirgo's line on the planet",
     "response_text": "Warning. Radiation levels at three hundred millirads per minute and rising. Lethal exposure in one minute.",
     "response_lines": [
       278
@@ -15297,8 +15366,9 @@
     "season": 4,
     "stardate": "44390.1",
     "scene": "Outside Holodeck",
-    "query_speaker": "T'PEL",
-    "query_text": "I was not interested in the information. I was curious as to your security safeguards. They appear to be adequate. Cancel the request. You may leave.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Data's Day: unsolicited holodeck start announcement auto-paired with T'Pel's line",
     "response_text": "Programme Crusher four in progress.",
     "response_lines": [
       221
@@ -17987,8 +18057,9 @@
     "season": 4,
     "stardate": "44932.3",
     "scene": "Bridge",
-    "query_speaker": "PICARD",
-    "query_text": "Mister Data, run a full systems diagnostic.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "In Theory: unsolicited decompression warning auto-paired with Picard's order to Data",
     "response_text": "Warning. Atmospheric decompression in Bridge Observation Lounge. Environmental compensation sequence has been initiated.",
     "response_lines": [
       220
@@ -18604,8 +18675,9 @@
     "season": 5,
     "stardate": "45429.3",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "no qualifying non-computer utterance within the pairing window",
     "response_text": "Commander Riker is in his quarters.",
     "response_lines": [
       195
@@ -20869,8 +20941,9 @@
     "season": 6,
     "stardate": "46235.7",
     "scene": "Shuttlecraft",
-    "query_speaker": "PICARD",
-    "query_text": "Transfer auxiliary power to the inertial dampers.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Rascals: unsolicited shuttle structural-failure warning auto-paired with Picard's order to Ro",
     "response_text": "Warning. Structural failure imminent.",
     "response_lines": [
       36
@@ -20963,8 +21036,8 @@
     "season": 6,
     "stardate": "46235.7",
     "scene": "School room",
-    "query_speaker": "LURIN",
-    "query_text": "Very hazardous, Commander.",
+    "query_speaker": "PICARD JR",
+    "query_text": "Computer, display interior security grid.",
     "response_text": "Hello. I'm the classroom computer system. What can I do for you, today?",
     "response_lines": [
       305
@@ -21003,7 +21076,9 @@
       "computer",
       "system",
       "can"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Rascals: classroom-7 child's computer greets the children (toy persona)"
   },
   {
     "id": "35337ff6e620",
@@ -21052,7 +21127,9 @@
       "can't",
       "would",
       "like"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Rascals: classroom-7 child's computer refuses the command and offers a game"
   },
   {
     "id": "dd0c268d4f90",
@@ -21101,7 +21178,9 @@
       "can't",
       "would",
       "like"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Rascals: classroom-7 child's computer refuses the command and offers plants/animals"
   },
   {
     "id": "3eae989d57f3",
@@ -21150,7 +21229,9 @@
       "galaxy",
       "class",
       "starship"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Rascals: classroom-7 child's computer gives a canned spelling lesson ('E N T E R P R I S E')"
   },
   {
     "id": "3e4c40d7c684",
@@ -21812,7 +21893,9 @@
       "command",
       "functions",
       "offline"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Ship in a Bottle: Moriarty takeover -- 'Command functions are offline.'"
   },
   {
     "id": "c07bc06589b8",
@@ -21857,7 +21940,9 @@
     "response_keywords": [
       "authorisation",
       "denied"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Ship in a Bottle: Moriarty takeover -- 'Authorisation denied.'"
   },
   {
     "id": "fb285c43322d",
@@ -21905,7 +21990,9 @@
       "codes",
       "longer",
       "valid"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Ship in a Bottle: Moriarty takeover -- 'Picard command codes are no longer valid.'"
   },
   {
     "id": "9e1bc31c9b6d",
@@ -22045,7 +22132,9 @@
       "command",
       "functions",
       "offline"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Ship in a Bottle: Moriarty takeover -- 'Command functions are offline.'"
   },
   {
     "id": "2533fb34d697",
@@ -22183,7 +22272,9 @@
     "response_keywords": [
       "interface",
       "complete"
-    ]
+    ],
+    "narrative_degraded": true,
+    "narrative_degraded_reason": "Ship in a Bottle: computer serves Moriarty ('Interface complete.')"
   },
   {
     "id": "a6b9e9df6cd4",
@@ -22528,9 +22619,9 @@
     "response_count": 1,
     "context": [
       {
-        "speaker": "PICARD",
-        "text": "Her name was Corlina. I'd arranged to take her out today, and then she discovered that I had already made a second date with another woman called, er, Penny, and Corlina was naturally upset.",
-        "line_num": 111,
+        "speaker": "Q",
+        "text": "I'd no idea you were such a cad. I'm impressed.",
+        "line_num": 112,
         "is_computer": false
       },
       {
@@ -22907,8 +22998,9 @@
     "season": 6,
     "stardate": "46731.5",
     "scene": "Laboratory",
-    "query_speaker": "DATA",
-    "query_text": "If we narrow the search parameters to the biological database, it might increase the chances of the computer finding a match.",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "The Chase: unsolicited 'Pattern match found' report auto-paired with Data's Bridge suggestion",
     "response_text": "Pattern match found.",
     "response_lines": [
       198
@@ -23149,8 +23241,8 @@
     "season": 6,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "PICARD",
-    "query_text": "Beverly, what's happening?",
+    "query_speaker": "CRUSHER",
+    "query_text": "I'm all right. Computer, shield status?",
     "response_text": "Metaphasic shield holding. All systems within normal operating parameters.",
     "response_lines": [
       379
@@ -24104,8 +24196,9 @@
     "season": 7,
     "stardate": "",
     "scene": "Nacelle control",
-    "query_speaker": "WORF",
-    "query_text": "What are you doing?",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Eye Of The Beholder: unsolicited plasma-venting warning auto-paired with Worf's question to Troi",
     "response_text": "Warning. Plasma venting system will engage in seventy seconds.",
     "response_lines": [
       408

@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 TRANSCRIPTS_DIR = DATA_DIR / "raw" / "star_trek_transcript_search" / "scripts" / "NextGen"
 
-SPEAKER_RE = re.compile(r"^([A-Z][A-Z0-9 '.-]+):\s*(.+)$")
+SPEAKER_RE = re.compile(r"^([A-Z][A-Z0-9 '.-]*):\s*(.+)$")
 SCENE_RE = re.compile(r"^\[(.+)\]$")
 STARDATE_RE = re.compile(r"Stardate\s+(\d+\.?\d*)", re.IGNORECASE)
 COMPUTER_RE = re.compile(r"^(COMPUTER|COMPUTER VOICE|SHIP'S COMPUTER)$", re.IGNORECASE)
@@ -109,7 +109,10 @@ def write_jsonl(path: Path, rows: list[dict]) -> None:
 
 
 def parse_episode(path: Path) -> tuple[list[dict], dict]:
-    text = path.read_text()
+    # Pin UTF-8 explicitly: the transcripts contain UTF-8 bytes (e.g. U+FFFD for
+    # source-corrupted characters) that platform-default decoding (cp1252 on
+    # Windows) would mangle, breaking reproducibility across machines.
+    text = path.read_text(encoding="utf-8")
     lines = text.splitlines()
     episode_number = get_episode_number(path)
     season = get_season(path)
