@@ -102,6 +102,21 @@ QUERY_BLANKS: dict[str, str] = {
     "8a1312d4cce6": "Data's Day: unsolicited holodeck start announcement auto-paired with T'Pel's line",
     # "The Chase" -- autonomous search-result report at a scene cut.
     "2a5e0c7d59ce": "The Chase: unsolicited 'Pattern match found' report auto-paired with Data's Bridge suggestion",
+    # "Where Silence Has Lease" -- ship-wide alert when the entity drains the ship's
+    # power; auto-paired with Picard hailing the transporter room (a comms call, not a command).
+    "6098b0d8fc42": "Where Silence Has Lease: unsolicited 'Emergency power engaged' alert auto-paired with Picard hailing the transporter room",
+    # "Remember Me" -- life-support countdown broadcast while Crusher is trapped in the
+    # collapsing warp bubble; auto-paired with her self-talk about a stable threshold.
+    "18a17041338e": "Remember Me: unsolicited life-support countdown auto-paired with Crusher's self-talk",
+    # "Eye Of The Beholder" -- plasma-venting warning during Troi's vision; auto-paired
+    # with Worf's line to Troi ('What are you doing?').
+    "235d1b6d3ec5": "Eye Of The Beholder: unsolicited plasma-venting warning auto-paired with Worf's question to Troi",
+    # "Rascals" -- shuttle structural-failure warning after the Ferengi attack;
+    # auto-paired with Picard's order to Ro at the shuttle controls.
+    "21c3e8890fda": "Rascals: unsolicited shuttle structural-failure warning auto-paired with Picard's order to Ro",
+    # "In Theory" -- decompression warning when the false planet appears; auto-paired
+    # with Picard's order to Data (a person, not the computer).
+    "f688b1caf691": "In Theory: unsolicited decompression warning auto-paired with Picard's order to Data",
 }
 
 

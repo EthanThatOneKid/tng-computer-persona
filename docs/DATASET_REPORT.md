@@ -4,7 +4,7 @@
 - Computer interactions: 517
 - Narrative-degraded interactions (flagged): 30
 - Speaker profiles: 723
-- Enterprise computer training rows: 326
+- Enterprise computer training rows: 321
 - Character-conditioned training rows: 59577
 
 ## Dialogue by season
@@ -40,13 +40,13 @@
 
 | Speaker | Interactions |
 |---|---:|
-| PICARD | 114 |
+| PICARD | 111 |
 | LAFORGE | 101 |
 | DATA | 89 |
 | RIKER | 48 |
-| CRUSHER | 46 |
+| CRUSHER | 45 |
 | TROI | 18 |
-| WORF | 14 |
+| WORF | 13 |
 | BARCLAY | 10 |
 | K'EHLEYR | 8 |
 | WESLEY | 7 |

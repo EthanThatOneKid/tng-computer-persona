@@ -4063,8 +4063,8 @@
     "season": 2,
     "stardate": "42193.6",
     "scene": "Bridge",
-    "query_speaker": "PICARD",
-    "query_text": "Transporter room, have you been able to establish a lock?",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "Emergency power engaged.",
     "response_lines": [
       233
@@ -14240,8 +14240,8 @@
     "season": 4,
     "stardate": "44161.2",
     "scene": "Bridge",
-    "query_speaker": "CRUSHER",
-    "query_text": "Stable threshold. They've been trying to create a stable threshold. Where are they trying to do it? Where did they do it the first time? Engineering!",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "One minute, thirty seconds to life support failure.",
     "response_lines": [
       410
@@ -18029,8 +18029,8 @@
     "season": 4,
     "stardate": "44932.3",
     "scene": "Bridge",
-    "query_speaker": "PICARD",
-    "query_text": "Mister Data, run a full systems diagnostic.",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "Warning. Atmospheric decompression in Bridge Observation Lounge. Environmental compensation sequence has been initiated.",
     "response_lines": [
       220
@@ -20911,8 +20911,8 @@
     "season": 6,
     "stardate": "46235.7",
     "scene": "Shuttlecraft",
-    "query_speaker": "PICARD",
-    "query_text": "Transfer auxiliary power to the inertial dampers.",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "Warning. Structural failure imminent.",
     "response_lines": [
       36
@@ -24164,8 +24164,8 @@
     "season": 7,
     "stardate": "",
     "scene": "Nacelle control",
-    "query_speaker": "WORF",
-    "query_text": "What are you doing?",
+    "query_speaker": "",
+    "query_text": "",
     "response_text": "Warning. Plasma venting system will engage in seventy seconds.",
     "response_lines": [
       408
