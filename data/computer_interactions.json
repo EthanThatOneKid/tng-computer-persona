@@ -101,8 +101,9 @@
     "season": 1,
     "stardate": "41153.7",
     "scene": "Corridor",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "no qualifying non-computer utterance within the pairing window",
     "response_text": "You're welcome, Commander Riker. And if you care to enter, Commander?",
     "response_lines": [
       455
@@ -292,8 +293,9 @@
     "season": 1,
     "stardate": "41997.7",
     "scene": "Outside Holodeck",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "The Big Goodbye: unsolicited holodeck prompt ('Programme desired location.') auto-paired with Troi's Ready-room line",
     "response_text": "Programme desired location.",
     "response_lines": [
       25
@@ -944,8 +946,9 @@
     "season": 1,
     "stardate": "41365.9",
     "scene": "Corridor",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "no qualifying non-computer utterance within the pairing window",
     "response_text": "Decks two through four to cargo transporters. Decks five through ten, proceed to transporters one, two, three and four. Decks six through sixteen, proceed to transporters five, six, seven, eight, nine and ten.",
     "response_lines": [
       274
@@ -1721,8 +1724,9 @@
     "season": 1,
     "stardate": "41365.9",
     "scene": "Outside Turbolift",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "11001001: 'Bridge access denied' warning auto-paired with Picard's observation in Engineering",
     "response_text": "Bridge access denied.",
     "response_lines": [
       415
@@ -1863,8 +1867,9 @@
     "season": 1,
     "stardate": "41365.9",
     "scene": "Starbase Command Centre",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "11001001: 'cleared the starbase perimeter' announcement auto-paired with Bynar dialogue",
     "response_text": "USS Enterprise has cleared the starbase perimeter.",
     "response_lines": [
       526
@@ -2660,8 +2665,9 @@
     "season": 1,
     "stardate": "41416.2",
     "scene": "Classroom",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Coming Of Age: unsolicited classroom test announcement auto-paired with Riker's corridor line",
     "response_text": "Last question on the hyperspace physics test. If the matter and antimatter tanks on a Galaxy class starship are nine tenths depleted, calculate the intermix ratio necessary to reach a starbase a hundred light years away at warp factor eight. Begin. Time elapsed. You now have one hour free before the next test.",
     "response_lines": [
       105,
@@ -3884,8 +3890,9 @@
     "season": 1,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "no qualifying non-computer utterance within the pairing window",
     "response_text": "Repulse shuttle has cleared docking bay three.",
     "response_lines": [
       7
@@ -3921,8 +3928,9 @@
     "season": 1,
     "stardate": "",
     "scene": "Transporter room",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "no qualifying non-computer utterance within the pairing window",
     "response_text": "Bio-transfer authorisation complete.",
     "response_lines": [
       280
@@ -4063,8 +4071,9 @@
     "season": 2,
     "stardate": "42193.6",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Where Silence Has Lease: unsolicited 'Emergency power engaged' alert auto-paired with Picard hailing the transporter room",
     "response_text": "Emergency power engaged.",
     "response_lines": [
       233
@@ -4109,8 +4118,9 @@
     "season": 2,
     "stardate": "42193.6",
     "scene": "Engineering",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Where Silence Has Lease: destruct voice-print recognition auto-paired with Pulaski's lounge line",
     "response_text": "Recognise, Picard Jean-Luc. Recognise Riker, William T.",
     "response_lines": [
       389
@@ -4251,8 +4261,9 @@
     "season": 2,
     "stardate": "42193.6",
     "scene": "Engineering",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Where Silence Has Lease: destruct countdown broadcast auto-paired with Riker's crew debate",
     "response_text": "Twenty minutes to auto-destruct. Nineteen minutes, fifty seconds",
     "response_lines": [
       397
@@ -4441,8 +4452,9 @@
     "season": 2,
     "stardate": "42193.6",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Where Silence Has Lease: destruct countdown broadcast auto-paired with Picard's question to Troi",
     "response_text": "Twenty seconds to auto-destruct. Ten seconds to auto-destruct.",
     "response_lines": [
       438
@@ -4628,8 +4640,9 @@
     "season": 2,
     "stardate": "42286.3",
     "scene": "Outside Holodeck",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Elementary, Dear Data: unsolicited 'Programme complete. You may enter.' announcement auto-paired with La Forge's question to Data",
     "response_text": "Programme complete. You may enter.",
     "response_lines": [
       105
@@ -9043,8 +9056,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Utopia Planitia Drafting room",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Booby Trap: unsolicited energy-critical/terminate-simulations announcement auto-paired with La Forge's line to the Brahms simulation",
     "response_text": "Energy reserves reaching critical stage. Standard procedure requires termination of all simulations.",
     "response_lines": [
       328
@@ -9325,8 +9339,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Utopia Planitia Drafting room",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Booby Trap: unsolicited shield/radiation warning auto-paired with La Forge's remark to the Brahms simulation",
     "response_text": "Deflector shield failure. Lethal radiation levels. Fatal exposure in twenty six minutes.",
     "response_lines": [
       400
@@ -9374,8 +9389,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Booby Trap: unsolicited shield/radiation warning auto-paired with La Forge's escape plan to Picard",
     "response_text": "Deflector shield failure. Lethal radiation levels. Fatal exposure in twelve minutes.",
     "response_lines": [
       420
@@ -9423,8 +9439,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Booby Trap: unsolicited shield/radiation warning auto-paired with Riker's all-hands announcement",
     "response_text": "Deflector shield failure. Lethal radiation levels.",
     "response_lines": [
       428
@@ -9849,8 +9866,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "The Defector: unsolicited priority-one Starfleet message alert auto-paired with Picard's musing on Romulan cloaking",
     "response_text": "Captain Picard, priority one message from Starfleet coming in on secured channel.",
     "response_lines": [
       166
@@ -9954,8 +9972,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "The Defector: incoming-message alert auto-paired with Setal's line in the debriefing room",
     "response_text": "Captain Picard, priority message from security officer, Klingon vessel Bortas.",
     "response_lines": [
       226
@@ -10333,8 +10352,9 @@
     "season": 3,
     "stardate": "43745.2",
     "scene": "Resort Lobby",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "no qualifying non-computer utterance within the pairing window",
     "response_text": "Welcome to Risa. All that is ours is yours.",
     "response_lines": [
       8
@@ -10995,8 +11015,9 @@
     "season": 3,
     "stardate": "",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Hollow Pursuits: unsolicited structural-failure warning auto-paired with Riker's question to Data",
     "response_text": "At current acceleration, structural failure will occur in thirty seconds.",
     "response_lines": [
       465
@@ -11772,8 +11793,9 @@
     "season": 4,
     "stardate": "44085.7",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Brothers: unsolicited life-support evacuation broadcast auto-paired with Riker's order to La Forge",
     "response_text": "Evacuate Bridge. Deck one life support failure in twenty seconds.",
     "response_lines": [
       67
@@ -14048,8 +14070,9 @@
     "season": 4,
     "stardate": "44161.2",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Remember Me: unsolicited life-support countdown auto-paired with Crusher's aside ('I'm not talking to you.')",
     "response_text": "Two minutes, thirty seconds to life support failure.",
     "response_lines": [
       401
@@ -14242,8 +14265,9 @@
     "season": 4,
     "stardate": "44161.2",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Remember Me: unsolicited life-support countdown auto-paired with Crusher's self-talk",
     "response_text": "One minute, thirty seconds to life support failure.",
     "response_lines": [
       410
@@ -14998,8 +15022,9 @@
     "season": 4,
     "stardate": "44307.3",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Final Mission: unsolicited radiation warning auto-paired with Dirgo's line on the planet",
     "response_text": "Warning. Radiation levels at three hundred millirads per minute and rising. Lethal exposure in one minute.",
     "response_lines": [
       278
@@ -15341,8 +15366,9 @@
     "season": 4,
     "stardate": "44390.1",
     "scene": "Outside Holodeck",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Data's Day: unsolicited holodeck start announcement auto-paired with T'Pel's line",
     "response_text": "Programme Crusher four in progress.",
     "response_lines": [
       221
@@ -18031,8 +18057,9 @@
     "season": 4,
     "stardate": "44932.3",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "In Theory: unsolicited decompression warning auto-paired with Picard's order to Data",
     "response_text": "Warning. Atmospheric decompression in Bridge Observation Lounge. Environmental compensation sequence has been initiated.",
     "response_lines": [
       220
@@ -18648,8 +18675,9 @@
     "season": 5,
     "stardate": "45429.3",
     "scene": "Bridge",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "no qualifying non-computer utterance within the pairing window",
     "response_text": "Commander Riker is in his quarters.",
     "response_lines": [
       195
@@ -20913,8 +20941,9 @@
     "season": 6,
     "stardate": "46235.7",
     "scene": "Shuttlecraft",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Rascals: unsolicited shuttle structural-failure warning auto-paired with Picard's order to Ro",
     "response_text": "Warning. Structural failure imminent.",
     "response_lines": [
       36
@@ -22969,8 +22998,9 @@
     "season": 6,
     "stardate": "46731.5",
     "scene": "Laboratory",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "The Chase: unsolicited 'Pattern match found' report auto-paired with Data's Bridge suggestion",
     "response_text": "Pattern match found.",
     "response_lines": [
       198
@@ -24166,8 +24196,9 @@
     "season": 7,
     "stardate": "",
     "scene": "Nacelle control",
-    "query_speaker": "",
-    "query_text": "",
+    "query_speaker": null,
+    "query_text": null,
+    "queryless_reason": "Eye Of The Beholder: unsolicited plasma-venting warning auto-paired with Worf's question to Troi",
     "response_text": "Warning. Plasma venting system will engage in seventy seconds.",
     "response_lines": [
       408

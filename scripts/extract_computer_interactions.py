@@ -84,10 +84,11 @@ QUERY_REPAIRS: dict[str, tuple[str, str]] = {
 # These are unsolicited computer announcements/prompts -- ship-wide warnings,
 # broadcasts, countdowns, holodeck/test prompts, or automated status reports --
 # that the extractor latched onto unrelated nearby dialogue for (often across a
-# scene cut the heuristic cannot see). The dataset's convention for such lines is
-# a blank query (the corpus already carries queryless interactions). Keyed by
-# interaction ID with the episode and reason. Requires plot knowledge, so it is
-# curated explicitly rather than inferred from text.
+# scene cut the heuristic cannot see). Such interactions carry null query fields
+# plus a materialised queryless_reason on the row itself (the corpus already
+# carries queryless rows of this kind). Keyed by interaction ID with the episode
+# and reason. Requires plot knowledge, so it is curated explicitly rather than
+# inferred from text.
 QUERY_BLANKS: dict[str, str] = {
     # "The Big Goodbye" -- holodeck setup prompt right after the Ready-room scene.
     "3c9490fc92e7": "The Big Goodbye: unsolicited holodeck prompt ('Programme desired location.') auto-paired with Troi's Ready-room line",
@@ -146,6 +147,10 @@ QUERY_BLANKS: dict[str, str] = {
     # line 410 is blanked above).
     "931b5b59bde5": "Remember Me: unsolicited life-support countdown auto-paired with Crusher's aside ('I'm not talking to you.')",
 }
+
+# Reason attached when the pairing heuristic itself found no qualifying utterance
+# in the window (as opposed to a curated QUERY_BLANKS override).
+NO_QUERY_CANDIDATE_REASON = "no qualifying non-computer utterance within the pairing window"
 
 
 def score_query(candidate: dict, response: dict) -> int:
@@ -208,15 +213,41 @@ def main() -> None:
             context_end = min(len(rows), next_index + 1)
             context = rows[context_start:context_end]
 
+            interaction_id = stable_id(episode, row["line_num"], cluster[0]["text"])
+            query_speaker = query["speaker"] if query else None
+            query_text = query["text"] if query else None
+            queryless_reason = None
+
+            repair = QUERY_REPAIRS.get(interaction_id)
+            if repair is not None:
+                # Replace an auto-paired query that does not drive the response (e.g.
+                # the computer opens a scene right after unrelated dialogue from another
+                # scene). See QUERY_REPAIRS above.
+                query_speaker, query_text = repair
+            if interaction_id in QUERY_BLANKS:
+                # No utterance elicited this computer line (unsolicited announcement,
+                # prompt, or broadcast); represent that explicitly with null query
+                # fields and a materialised reason. See QUERY_BLANKS above.
+                query_speaker, query_text = None, None
+                queryless_reason = QUERY_BLANKS[interaction_id]
+            elif query_speaker is None:
+                # The pairing heuristic found no qualifying utterance in the window.
+                queryless_reason = NO_QUERY_CANDIDATE_REASON
+
             interaction = {
-                "id": stable_id(episode, row["line_num"], cluster[0]["text"]),
+                "id": interaction_id,
                 "episode": episode,
                 "episode_number": row["episode_number"],
                 "season": row["season"],
                 "stardate": row["stardate"],
                 "scene": row["scene"],
-                "query_speaker": query["speaker"] if query else "",
-                "query_text": query["text"] if query else "",
+                "query_speaker": query_speaker,
+                "query_text": query_text,
+                **(  # only queryless interactions carry a reason
+                    {"queryless_reason": queryless_reason}
+                    if queryless_reason is not None
+                    else {}
+                ),
                 "response_text": " ".join(item["text"] for item in cluster),
                 "response_lines": [item["line_num"] for item in cluster],
                 "response_count": len(cluster),
@@ -234,18 +265,6 @@ def main() -> None:
             if interaction["id"] in NARRATIVE_DEGRADED:
                 interaction["narrative_degraded"] = True
                 interaction["narrative_degraded_reason"] = NARRATIVE_DEGRADED[interaction["id"]]
-            repair = QUERY_REPAIRS.get(interaction["id"])
-            if repair is not None:
-                # Replace an auto-paired query that does not drive the response (e.g.
-                # the computer opens a scene right after unrelated dialogue from another
-                # scene). See QUERY_REPAIRS above.
-                interaction["query_speaker"], interaction["query_text"] = repair
-            if interaction["id"] in QUERY_BLANKS:
-                # No utterance elicited this computer line (unsolicited announcement,
-                # prompt, or broadcast); the dataset convention is a blank query. See
-                # QUERY_BLANKS above.
-                interaction["query_speaker"] = ""
-                interaction["query_text"] = ""
             interactions.append(interaction)
             index = next_index
 
@@ -281,10 +300,15 @@ def main() -> None:
         row = next((row for row in interactions if row["id"] == interaction_id), None)
         if row is None:
             raise SystemExit(f"Query-blank override target not found: {interaction_id}")
-        if row["query_speaker"] or row["query_text"]:
+        if row["query_speaker"] is not None or row["query_text"] is not None:
             raise SystemExit(
                 f"Query-blank override not applied for {interaction_id}: got "
                 f"({row['query_speaker']!r}, {row['query_text']!r})"
+            )
+        if row.get("queryless_reason") != QUERY_BLANKS[interaction_id]:
+            raise SystemExit(
+                f"Query-blank reason not applied for {interaction_id}: got "
+                f"{row.get('queryless_reason')!r}"
             )
 
 
