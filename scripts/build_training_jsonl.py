@@ -23,6 +23,11 @@ def looks_like_direct_query(text: str) -> bool:
 def build_enterprise_computer_records(interactions: list[dict]) -> list[dict]:
     rows: list[dict] = []
     for interaction in interactions:
+        if interaction.get("narrative_degraded"):
+            # Narrative-driven degradation (hijack, virus, alien interference) is
+            # not representative of the capable computer persona; keep it out of
+            # the golden training set.
+            continue
         if not interaction["query_text"] or not interaction["response_text"]:
             continue
         if not looks_like_direct_query(interaction["query_text"]):
