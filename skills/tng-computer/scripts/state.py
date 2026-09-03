@@ -14,8 +14,8 @@ exclusion for evaluation so the tracker never learns from rows being scored.
 
 Usage (from the repo root):
 
-    python skills/tng-computer/state.py --episode 100110.txt
-    python skills/tng-computer/state.py --query "where is Commander Data?" --episode 100101.txt
+    python skills/tng-computer/scripts/state.py --episode 100110.txt
+    python skills/tng-computer/scripts/state.py --query "where is Commander Data?" --episode 100101.txt
 """
 
 from __future__ import annotations
@@ -25,7 +25,7 @@ import json
 import re
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parents[2]  # repo root
+BASE_DIR = Path(__file__).resolve().parents[3]  # repo root
 TRAIN_PATH = BASE_DIR / "data" / "enterprise_computer_train.jsonl"
 
 # "Captain Picard is in Transporter room three." /

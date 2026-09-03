@@ -8,9 +8,9 @@ dependency-free and fast enough to rebuild in seconds.
 
 Usage (from the repo root):
 
-    python skills/tng-computer/retrieval.py "where is Commander Data?" --episode 100101.txt
-    python skills/tng-computer/retrieval.py "shield status?" --episode 100161.txt --scene Bridge --k 8
-    python skills/tng-computer/retrieval.py "Computer, locate the source of the signal" --computer
+    python skills/tng-computer/scripts/retrieval.py "where is Commander Data?" --episode 100101.txt
+    python skills/tng-computer/scripts/retrieval.py "shield status?" --episode 100161.txt --scene Bridge --k 8
+    python skills/tng-computer/scripts/retrieval.py "Computer, locate the source of the signal" --computer
 
 The default output is the ``EPISODE CONTEXT`` block for the agent prompt:
 non-computer dialogue lines only (the computer's own lines are the thing being
@@ -27,7 +27,7 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parents[2]  # repo root
+BASE_DIR = Path(__file__).resolve().parents[3]  # repo root
 DIALOGUE_PATH = BASE_DIR / "data" / "dialogue.jsonl"
 TRANSCRIPTS_DIR = (
     BASE_DIR

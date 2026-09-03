@@ -19,9 +19,9 @@ skills/tng-computer/
   SKILL.md            persona definition (consumed by an LLM)
   README.md           this file (engineering doc)
   system_prompt.md    the prompt template with {{STATE}} / {{CONTEXT}} slots
-  retrieval.py        runnable script: episode-context retrieval
-  state.py            runnable script: verified ship-state / crew locations
-  eval/
+  scripts/
+    state.py          verified ship-state / crew locations (runnable)
+    retrieval.py      episode-context retrieval (runnable)
     evaluate.py       seeded holdout eval + ablations + retrieval probe
     results/          regenerated reports (gitignored)
 ```
@@ -32,31 +32,31 @@ convention: deterministic, stdlib-only) plus the persona definition.
 
 ## Grounding scripts
 
-- **`state.py`** — builds crew-location facts from the ship's *verified*
-  computer responses in `data/enterprise_computer_train.jsonl` (never
-  character dialogue), keyed per episode (locations are episode-relative).
-  `--episode` prints the `SHIP STATE` block; `--query` answers a
-  crew-location query from verified state.
-- **`retrieval.py`** — an IDF token index over `data/dialogue.jsonl` (60K
-  rows, builds in ~2s) with raw-transcript fallback. Prints the `EPISODE
-  CONTEXT` block for a query/episode/scene (non-computer lines by default;
-  `--computer` retrieves the ship's own lines).
+- **`scripts/state.py`** — builds crew-location facts from the ship's
+  *verified* computer responses in `data/enterprise_computer_train.jsonl`
+  (never character dialogue), keyed per episode (locations are
+  episode-relative). `--episode` prints the `SHIP STATE` block; `--query`
+  answers a crew-location query from verified state.
+- **`scripts/retrieval.py`** — an IDF token index over `data/dialogue.jsonl`
+  (60K rows, builds in ~2s) with raw-transcript fallback. Prints the
+  `EPISODE CONTEXT` block for a query/episode/scene (non-computer lines by
+  default; `--computer` retrieves the ship's own lines).
 
 ## Quick start (from the repo root)
 
 ```bash
-python skills/tng-computer/state.py --episode 100110.txt
-python skills/tng-computer/state.py --query "where is Commander Data?" --episode 100101.txt
-python skills/tng-computer/retrieval.py "where is Commander Data?" --episode 100101.txt
+python skills/tng-computer/scripts/state.py --episode 100110.txt
+python skills/tng-computer/scripts/state.py --query "where is Commander Data?" --episode 100101.txt
+python skills/tng-computer/scripts/retrieval.py "where is Commander Data?" --episode 100101.txt
 
-python skills/tng-computer/eval/evaluate.py                   # offline eval
-python skills/tng-computer/eval/evaluate.py --backend openai  # real-LLM eval
-python skills/tng-computer/eval/evaluate.py --limit 10        # smoke run
+python skills/tng-computer/scripts/evaluate.py                   # offline eval
+python skills/tng-computer/scripts/evaluate.py --backend openai  # real-LLM eval
+python skills/tng-computer/scripts/evaluate.py --limit 10        # smoke run
 ```
 
 ## Evaluation
 
-`eval/evaluate.py` holds out a seeded 10% of
+`scripts/evaluate.py` holds out a seeded 10% of
 `enterprise_computer_train.jsonl` (the verified golden set) and scores five
 candidates — the four ablations of the layered offline answerer (full /
 no-context / no-state / bare; state → verified golden memory → best-matching
@@ -65,7 +65,7 @@ episode computer line → `That information is not available.`) plus a
 gold-token coverage. A retrieval probe independently reports whether the
 verified answer line appears in the top-k computer lines retrieved for the
 query, and a response-source table shows how often each layer produced the
-answer. Reports land in `eval/results/`.
+answer. Reports land in `scripts/results/`.
 
 Holding-out IDs are excluded from the offline answerer's memory, so the
 numbers measure real generalization, not leakage. `--full-state` switches to
@@ -81,4 +81,4 @@ replies (`OPENAI_API_KEY`, `OPENAI_BASE_URL`, `OPENAI_MODEL`).
   in PR #3 (`6ee4fb0`); queryless rows carry `queryless_reason`.
 - Never edit generated data by hand — rerun `python -m scripts.run_pipeline`
   (see `AGENTS.md`).
-- Results under `eval/results/` are regenerable artifacts.
+- Results under `scripts/results/` are regenerable artifacts.

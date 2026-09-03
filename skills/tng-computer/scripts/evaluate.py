@@ -35,10 +35,10 @@ retrieved for the query.
 
 Usage (from the repo root):
 
-    python skills/tng-computer/eval/evaluate.py                  # offline, leak-free
-    python skills/tng-computer/eval/evaluate.py --full-state     # offline, realistic
-    python skills/tng-computer/eval/evaluate.py --backend openai # real LLM (OPENAI_API_KEY)
-    python skills/tng-computer/eval/evaluate.py --limit 10       # quick smoke run
+    python skills/tng-computer/scripts/evaluate.py                  # offline, leak-free
+    python skills/tng-computer/scripts/evaluate.py --full-state     # offline, realistic
+    python skills/tng-computer/scripts/evaluate.py --backend openai # real LLM (OPENAI_API_KEY)
+    python skills/tng-computer/scripts/evaluate.py --limit 10       # quick smoke run
 """
 
 from __future__ import annotations
@@ -55,7 +55,7 @@ from pathlib import Path
 
 SKILL_DIR = Path(__file__).resolve().parents[1]  # skills/tng-computer/
 REPO_ROOT = SKILL_DIR.parents[1]
-sys.path.insert(0, str(SKILL_DIR))
+sys.path.insert(0, str(SKILL_DIR / "scripts"))
 
 from retrieval import RetrievalIndex  # noqa: E402
 from state import StateTracker  # noqa: E402

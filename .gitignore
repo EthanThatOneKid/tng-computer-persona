@@ -1,4 +1,4 @@
 __pycache__/
 *.pyc
 .env
-skills/tng-computer/eval/results/
+skills/tng-computer/scripts/results/
